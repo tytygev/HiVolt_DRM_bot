@@ -55,8 +55,8 @@ try:
     logger.debug(f"Бот запущен с локальным токеном.")
 except ModuleNotFoundError:
     # Если локального файла нет, берем серверный токен
-    import token
-    bot = telebot.TeleBot(token.TOKEN, threaded=True)
+    import token_master
+    bot = telebot.TeleBot(token_master.TOKEN, threaded=True)
     logger.debug(f"Бот запущен с серверным токеном.")
 
 # Монолитное ОЗУ-хранилище сессий активных конструкторов отчетов. Ключ: user_id, Значение: dict структуры данных
